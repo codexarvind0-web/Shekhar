@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIVSHANKAR KESARI | Mobile & Electronics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,Arial,sans-serif;background:#f5f8fc;color:#183653}
+a{text-decoration:none;color:inherit}
+
+header{
+ background:#fff;padding:16px 7%;
+ display:flex;justify-content:space-between;align-items:center;
+ position:sticky;top:0;z-index:100;
+ box-shadow:0 4px 20px #214b6b16
+}
+.logo{font-size:19px;font-weight:900;color:#17436e}
+.logo span{color:#09a9c5}
+nav{display:flex;gap:20px}
+nav a{font-size:13px;font-weight:600;color:#49647d}
+nav a:hover{color:#08a8c7}
+
+/* HERO */
+.hero{
+ min-height:600px;padding:75px 7%;
+ display:grid;grid-template-columns:1.1fr .9fr;
+ gap:35px;align-items:center;
+ position:relative;overflow:hidden;
+ background:
+ linear-gradient(90deg,rgba(8,24,43,.83),rgba(8,24,43,.58)),
+ url("IMG-20261108-WA0022.jpg") center/cover no-repeat;
+}
+.hero-content{position:relative;z-index:2}
+.tag{
+ display:inline-block;padding:10px 17px;border-radius:30px;
+ background:rgba(255,255,255,.13);
+ border:1px solid rgba(255,255,255,.3);
+ color:#7ceaff;font-size:12px;font-weight:800;letter-spacing:1.5px;
+}
+h1{
+ font-size:clamp(38px,5.5vw,68px);
+ line-height:1.16;margin:24px 0;
+ font-weight:900;letter-spacing:-1.5px;
+ color:#fff;
+}
+h1 .line1{display:block;color:#fff}
+h1 .line2{
+ display:block;
+ background:linear-gradient(90deg,#55e8ff,#a99aff,#ff9bcf);
+ -webkit-background-clip:text;color:transparent;
+}
+.hero p{
+ color:#e2effb;line-height:2;font-size:15px;
+ max-width:550px;font-weight:500;
+}
+.hero p b{color:#65e9ff}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+ display:inline-block;margin-top:25px;padding:14px 23px;
+ border-radius:10px;
+ background:linear-gradient(100deg,#08b9d2,#327de7,#8a55df);
+ color:white;font-weight:800;font-size:13px;
+ box-shadow:0 8px 22px #328de044;transition:.3s;
+}
+.btn:hover{transform:translateY(-4px)}
+.btn2{background:rgba(255,255,255,.13);border:1px solid #bdefff}
+.hero-image{position:relative;z-index:2}
+.hero-image img{
+ width:100%;height:340px;object-fit:cover;
+ border-radius:22px;border:5px solid rgba(255,255,255,.9);
+ box-shadow:0 15px 45px #0005;
+}
+.hero-label{
+ position:absolute;bottom:17px;left:17px;
+ background:#fff;color:#167eae;padding:10px 15px;
+ border-radius:10px;font-size:12px;font-weight:800;
+}
+
+/* SECTION HEADINGS */
+section{padding:70px 7%}
+.heading{text-align:center;margin-bottom:38px}
+.heading h2{
+ font-size:32px;font-weight:900;color:#173b60;
+ letter-spacing:-.5px;
+}
+.heading h2 span{
+ background:linear-gradient(90deg,#08aeca,#7656e8);
+ -webkit-background-clip:text;color:transparent;
+}
+.heading p{color:#71849a;margin-top:9px;font-size:14px}
+
+/* SERVICES */
+.services{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.service{
+ position:relative;overflow:hidden;
+ padding:28px 25px;
+ min-height:190px;
+ background:linear-gradient(145deg,#fff,#f0f8ff);
+ border:1px solid #dceaf5;
+ border-radius:18px;
+ box-shadow:0 10px 30px #204b6b10;
+ transition:.3s;
+}
+.service:before{
+ content:"";position:absolute;top:0;left:0;
+ width:100%;height:4px;
+ background:linear-gradient(90deg,#00bcd4,#5378ed,#a15be5);
+}
+.service:hover{
+ transform:translateY(-7px);
+ box-shadow:0 18px 35px #204b6b20;
+}
+.service-icon{
+ width:58px;height:58px;display:grid;place-items:center;
+ border-radius:17px;
+ background:linear-gradient(135deg,#d8f9ff,#e9e2ff);
+ font-size:27px;margin-bottom:17px;
+}
+.service h3{font-size:18px;color:#204767;margin-bottom:9px}
+.service p{color:#71869b;font-size:13px;line-height:1.8}
+
+/* PRODUCTS */
+.products{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.product{
+ background:white;border:1px solid #e0eaf3;
+ border-radius:17px;overflow:hidden;
+ box-shadow:0 8px 25px #193c5b10;
+ transition:.3s;
+}
+.product:hover{
+ transform:translateY(-6px);
+ box-shadow:0 16px 32px #193c5b20;
+}
+.product img{
+ width:100%;height:220px;object-fit:cover;background:#edf4f8;
+}
+.info{padding:18px}
+.info h3{font-size:16px;color:#204766;margin:5px 0}
+.info p{color:#72869a;font-size:13px;line-height:1.8}
+.info strong{display:block;color:#d18b17;margin:12px 0;font-size:12px}
+.smallbtn{
+ display:inline-block;padding:10px 15px;
+ background:linear-gradient(90deg,#defaff,#eee8ff);
+ border-radius:8px;color:#087e9b;
+ font-size:12px;font-weight:800;
+}
+.smallbtn:hover{background:linear-gradient(90deg,#08b9d2,#7656e8);color:white}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.gallery img{
+ width:100%;height:240px;object-fit:cover;
+ border-radius:15px;border:5px solid white;
+ box-shadow:0 7px 24px #183c5b17;
+}
+
+/* CONTACT */
+.contact{background:linear-gradient(135deg,#e0f9ff,#edf0ff,#fff0f8)}
+.numbers{
+ max-width:850px;margin:auto;
+ display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.number{
+ background:white;border:1px solid #dceaf3;
+ border-radius:11px;padding:16px;
+ display:flex;justify-content:space-between;align-items:center;
+ box-shadow:0 4px 15px #193c5b0a;
+}
+.number strong{color:#214767;font-size:14px}
+.number span{color:#0aab72;font-size:12px;font-weight:800}
+.address{text-align:center;margin-top:28px;color:#49647e;font-weight:600}
+footer{text-align:center;padding:24px;background:#173b60;color:#dcebf8;font-size:12px}
+
+@media(max-width:750px){
+ header{padding:14px 4%;flex-wrap:wrap;gap:12px}
+ .logo{font-size:15px}
+ nav{gap:12px}
+ nav a{font-size:11px}
+ .hero{grid-template-columns:1fr;padding:50px 6%;gap:28px}
+ .hero-image img{height:250px}
+ section{padding:55px 5%}
+ .services{grid-template-columns:1fr;gap:15px}
+ .service{min-height:auto;padding:23px}
+ .products{grid-template-columns:repeat(2,1fr);gap:11px}
+ .product img{height:145px}
+ .info{padding:11px}
+ .info h3{font-size:13px}
+ .info p{font-size:10px}
+ .info strong{font-size:10px}
+ .smallbtn{font-size:10px;padding:8px}
+ .heading h2{font-size:26px}
+ .gallery{grid-template-columns:1fr 1fr;gap:10px}
+ .gallery img{height:155px}
+ .numbers{grid-template-columns:1fr}
+ .number{padding:13px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">SHIVSHANKAR <span>KESARI</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="tag">✦ MOBILE • ELECTRONICS • REPAIRING</div>
+  <h1>
+   <span class="line1">SMART SERVICE.</span>
+   <span class="line2">TRUSTED QUALITY.</span>
+  </h1>
+  <p>
+   <b>आपका भरोसा, हमारी पहचान!</b><br>
+   मोबाइल हार्डवेयर और सॉफ्टवेयर रिपेयरिंग,
+   मोबाइल एक्सेसरीज़ और इलेक्ट्रॉनिक्स के लिए
+   आपका अपना भरोसेमंद स्टोर।
+  </p>
+  <div class="hero-buttons">
+   <a class="btn" href="#contact">✦ CONTACT US ↗</a>
+   <a class="btn btn2" href="#products">EXPLORE PRODUCTS →</a>
+  </div>
+ </div>
+
+ <div class="hero-image">
+  <img src="IMG-20261108-WA0022.jpg" alt="Mobile Repairing Microscope">
+  <div class="hero-label">🛠️ Professional Mobile Repairing</div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="heading">
+  <h2>Our <span>Services</span></h2>
+  <p>आपकी जरूरतों के लिए बेहतर सुविधाएँ और भरोसेमंद सेवा</p>
+ </div>
+ <div class="services">
+  <div class="service">
+   <div class="service-icon">🛠️</div>
+   <h3>Mobile Repairing</h3>
+   <p>Mobile Hardware & Software Repairing की सुविधा।</p>
+  </div>
+  <div class="service">
+   <div class="service-icon">🎧</div>
+   <h3>Mobile Accessories</h3>
+   <p>मोबाइल एक्सेसरीज़ और उपयोगी गैजेट्स की रेंज।</p>
+  </div>
+  <div class="service">
+   <div class="service-icon">🔌</div>
+   <h3>Electronics Products</h3>
+   <p>अलग-अलग इलेक्ट्रॉनिक्स प्रोडक्ट और एक्सेसरीज़।</p>
+  </div>
+ </div>
+</section>
+
+<section id="products">
+ <div class="heading">
+  <h2>Explore <span>Our Products</span></h2>
+  <p>हमारी दुकान में उपलब्ध प्रोडक्ट्स की झलक</p>
+ </div>
+ <div class="products">
+
+  <div class="product">
+   <img src="IMG-20261108-WA0015.jpg" alt="Bike Phone Holder">
+   <div class="info">
+    <h3>Bike Phone Holder</h3>
+    <p>XY-088 Mobile Holder</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Bike%20Phone%20Holder%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <img src="IMG-20261108-WA0005.jpg" alt="CLIPPRO Earphones">
+   <div class="info">
+    <h3>CLIPPRO 40 Earphones</h3>
+    <p>Audio Accessories</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=CLIPPRO%2040%20Earphones%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <img src="IMG-20261108-WA0026.jpg" alt="SUP Game Box">
+   <div class="info">
+    <h3>SUP Game Box</h3>
+    <p>400-in-1 Plus Gaming</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=SUP%20Game%20Box%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <img src="IMG-20261108-WA0022.jpg" alt="Repairing Microscope">
+   <div class="info">
+    <h3>Repairing Microscope</h3>
+    <p>Mobile Repairing Equipment</p>
+    <strong>Details: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Repairing%20Microscope%20ki%20details%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <img src="IMG-20261108-WA0029.jpg" alt="Speakers and Audio">
+   <div class="info">
+    <h3>Speakers & Audio</h3>
+    <p>Audio Electronics</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Speaker%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <img src="IMG-20261108-WA0032.jpg" alt="Mobile Accessories">
+   <div class="info">
+    <h3>Mobile Accessories</h3>
+    <p>Shop Accessories Collection</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Mobile%20Accessories%20ki%20details%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<section>
+ <div class="heading">
+  <h2>Inside <span>Our Shop</span></h2>
+  <p>हमारी दुकान और रिपेयरिंग सेटअप</p>
+ </div>
+ <div class="gallery">
+  <img src="IMG-20261108-WA0030.jpg" alt="Shop Front">
+  <img src="IMG-20261108-WA0012.jpg" alt="Repairing Workbench">
+  <img src="IMG-20261108-WA0018.jpg" alt="Repairing Tools">
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="heading">
+  <h2>Get <span>In Touch</span></h2>
+  <p>किसी भी नंबर पर क्लिक करके WhatsApp पर संपर्क करें</p>
+ </div>
+ <div class="numbers">
+  <a class="number" href="https://wa.me/918679474624" target="_blank"><strong>+91 8679474624</strong><span>WhatsApp ↗</span></a>
+  <a class="number" href="https://wa.me/919028803956" target="_blank"><strong>+91 9028803956</strong><span>WhatsApp ↗</span></a>
+  <a class="number" href="https://wa.me/919309535790" target="_blank"><strong>+91 9309535790</strong><span>WhatsApp ↗</span></a>
+  <a class="number" href="https://wa.me/918855901637" target="_blank"><strong>+91 8855901637</strong><span>WhatsApp ↗</span></a>
+  <a class="number" href="https://wa.me/918679564746" target="_blank"><strong>+91 8679564746</strong><span>WhatsApp ↗</span></a>
+ </div>
+ <div class="address">📍 Butibori, Maharashtra, India</div>
+</section>
+
+<footer>
+ © 2026 SHIVSHANKAR KESARI. All Rights Reserved.
+</footer>
+
+</body>
+</html>
